@@ -1,0 +1,14 @@
+#Folder excludes
+.vscode/
+.idea/
+target/
+bin/
+out/
+.git-rewrite/
+#Filetype excludes
+*.class
+*.jar
+*.iml
+
+#Specific file excludes
+.properties

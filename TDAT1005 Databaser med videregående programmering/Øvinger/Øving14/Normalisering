@@ -1,0 +1,39 @@
+Oppgave 1
+del a
+
+Tabellen på oppgave c er første normalform. (1NF)
+fordi det eksisterer en primærnøkkel og ingen kolonner er null
+
+del b
+
+Man kan ikke legge til en student uten kurs eller klasse.
+Dersom man skal slette en student må man gjøre det mange steder
+
+del c
+
+Splitter det opp i 3 tabeller, en for selve studenten, en for kurset, og en for klassen.
+Her er det ssn som kobler de sammen.
+
+tabelleler:
+(ssn, navn, adresse)
+(kursid, kursnavn, eksdato)
+(klnavn, st_retning)
+
+Oppgave 2
+
+(kunde_id, eier_id, eiendoms_id, 
+ kunde_navn, kunde_adresse, kunde_telefon, 
+ eiendom_adresse, 
+ eier_navn, eier_adressen, eier_telefon, 
+ dato_fra, dato_til, pris)
+
+Kandidatnøkler:
+(kunde_id, dato_til)
+(kunde_telefon, dato_til)
+(eiendoms_id, dato_til)
+
+Registrering:
+Man kan ikke registrere en eiendom uten en kunde eller eier.
+Eier slettes også dersom man fjerner en eiendom.
+
+

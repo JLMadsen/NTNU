@@ -1,0 +1,13 @@
+UPDATE town SET silver = default,
+iron = default,
+wood = default,
+spearman = default,
+archer = default,
+cavalry = default,
+townhall = default,
+barracks = default,
+raidinghut = default,
+woodcutter = default,
+ironmine = default,
+farm = default,
+wall = default

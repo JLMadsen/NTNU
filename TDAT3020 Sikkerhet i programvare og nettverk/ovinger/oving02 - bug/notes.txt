@@ -1,0 +1,9 @@
+Using std::stof to cast a string to float results in the web server crashing.
+This code can be found in http_server.cpp, 765.
+
+This implementation does not check for null, string, or large numbers.
+
+Sending in a: GET / HTTP/string
+Will result in Invalid argument exception.
+
+Changing std::stof to string comparison and null check will fix this problem.

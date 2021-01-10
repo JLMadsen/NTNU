@@ -1,0 +1,59 @@
+
+body {
+    background-color: lightsteelblue;
+}
+
+.header {
+    padding: 20px;
+    top: 10px;
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    text-align: center;
+}
+
+.grid-item {
+    padding: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+}
+
+.moodChart {
+    display: inline;
+}
+
+.chartItem {
+    display: inline;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#column {
+    text-align: center;
+    background-color: lightseagreen;
+    width: 40%;
+    margin: auto;
+    overflow: auto;
+    height: 100%;
+}
+
+#output {
+    font-size: 75px;
+}

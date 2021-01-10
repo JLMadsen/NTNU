@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="800.0" prefWidth="1400.0" styleClass="anchor" visible="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="team07.vikingwars.Controller.FXMLDocumentController">
+  <children>
+      <GridPane layoutY="9.0" prefHeight="60.0" prefWidth="1400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="9.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+          <ImageView fitHeight="66.0" fitWidth="276.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="https://drive.google.com/uc?id=1Q0aGlTs8QMlHLQUkWdR6p7zVwPhesr0M" />
+               </image>
+          </ImageView>
+         </children>
+      </GridPane>
+    <AnchorPane fx:id="Map" prefHeight="355.0" prefWidth="525.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="83.0">
+      <children>
+        <GridPane fx:id="grid" prefHeight="300.5" prefWidth="495.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.5">
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+    <Button mnemonicParsing="false" onAction="#LogOutButton" pickOnBounds="true" prefHeight="50.0" prefWidth="135.0" text="Log out" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="14.0" />
+    <Button layoutX="85.0" layoutY="14.0" mnemonicParsing="false" onAction="#TownList" prefHeight="51.0" text="Town list" />
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Map" prefHeight="51.0" text="Map" />
+    <Button layoutX="187.0" layoutY="14.0" mnemonicParsing="false" onAction="#Leaderboard" prefHeight="51.0" prefWidth="120.0" text="Leaderboard" />
+      <Button layoutX="327.0" layoutY="14.0" mnemonicParsing="false" onAction="#TutorialButton" prefHeight="51.0" prefWidth="120.0" text="Tutorial" />
+    <ListView fx:id="Notification_list" layoutX="7.0" prefHeight="324.0" prefWidth="135.0" AnchorPane.bottomAnchor="389.0" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="83.0" />
+      <ListView fx:id="chatListView" layoutX="7.0" layoutY="426.0" prefHeight="334.0" prefWidth="135.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="4.0" />
+    <ListView fx:id="Town_list" cache="false" depthTest="INHERIT" layoutX="1252.0" layoutY="83.0" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" onMouseClicked="#TownClicked" pickOnBounds="false" prefHeight="164.0" prefWidth="135.0" AnchorPane.bottomAnchor="389.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="83.0" />
+      <ListView fx:id="TownInfoList" layoutX="1252.0" layoutY="257.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="135.0" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="4.0" />
+      <TextField fx:id="chatTextField" layoutX="4.0" layoutY="758.0" onAction="#onEnter" prefHeight="25.0" prefWidth="135.0" promptText="World Chat..." AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="4.0" />
+      <GridPane fx:id="AttackorTradeGrid" layoutX="690.0" layoutY="416.0" prefHeight="60.0" prefWidth="15.0" visible="false" AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="695.0" AnchorPane.topAnchor="416.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+          <AnchorPane fx:id="AttackorTrade" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="236.0" prefWidth="212.0" styleClass="anchor" visible="false" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <children>
+              <Button fx:id="AttackEnemyTownBtn" layoutX="63.0" layoutY="184.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="Attack" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="63.0" />
+              <Button layoutX="251.0" layoutY="3.0" mnemonicParsing="false" onAction="#xAttackorTrade" prefHeight="30.0" prefWidth="30.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+              <Text fx:id="AttackorTradeTitle" layoutX="35.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Town 2" textAlignment="CENTER" wrappingWidth="148.8" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" fx:id="x113" />
+                     </font>
+                  </Text>
+              <ListView fx:id="AttackorTradeList" layoutX="17.0" layoutY="80.0" prefHeight="76.0" prefWidth="179.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="80.0" />
+            </children>
+          </AnchorPane>
+         </children>
+      </GridPane>
+    <AnchorPane fx:id="Town_map" layoutX="128.0" layoutY="83.0" prefHeight="705.0" prefWidth="1137.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="83.0">
+      <children>
+            <GridPane prefHeight="703.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="wall" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                          <Button id="TownHall" layoutX="-28.0" layoutY="-88.0" mnemonicParsing="false" onAction="#TownHall" prefHeight="177.0" prefWidth="179.0" text="Town Hall" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="-28.0" AnchorPane.rightAnchor="-29.0" AnchorPane.topAnchor="-88.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="wall" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                          <Button id="Barracks" layoutY="-6.0" mnemonicParsing="false" onAction="#Barracks" prefHeight="84.0" prefWidth="113.0" text="Barracks" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-6.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="71.0" prefWidth="93.0" styleClass="wall" GridPane.rowIndex="1">
+                           <children>
+                              <Button id="farmbutton" layoutX="12.0" layoutY="-22.0" mnemonicParsing="false" onAction="#farmButton" prefHeight="100.0" prefWidth="99.0" text="Farm" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="-22.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane fx:id="TownNamePane" onMouseClicked="#renameTownSelected" prefHeight="200.0" prefWidth="200.0" styleClass="anchor" />
+                    <Text fx:id="TownNameText" onMouseClicked="#renameTownSelected" strokeType="OUTSIDE" strokeWidth="0.0" text="Town 1" textAlignment="CENTER" wrappingWidth="367.2000250816345" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                      <font>
+                        <Font size="20.0" fx:id="x2" />
+                      </font>
+                    </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="lumbermillbutton" mnemonicParsing="false" onAction="#lumberMillButton" prefHeight="95.0" prefWidth="129.0" text="Woodcutter" GridPane.columnIndex="2">
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="ironminebutton" mnemonicParsing="false" onAction="#ironMineButton" prefHeight="78.0" prefWidth="103.0" text="Iron Mine">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <AnchorPane fx:id="RenameTownPane" prefHeight="230.0" prefWidth="367.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="RenameTownConfirmButton" layoutX="240.0" layoutY="9.0" mnemonicParsing="false" onAction="#renameTown" prefHeight="38.0" prefWidth="117.0" text="confirm" AnchorPane.rightAnchor="9.599999999999994" AnchorPane.topAnchor="9.0" />
+                        <TextField fx:id="RenameTownTextField" alignment="CENTER" layoutX="10.0" layoutY="53.0" prefHeight="38.0" prefWidth="348.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.199999999999989" AnchorPane.topAnchor="53.0">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                        <Text fx:id="TownNameText1" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rename Town:" wrappingWidth="221.60006713867188" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font size="20.0" fx:id="x21" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              <Button id="Raiding" mnemonicParsing="false" onAction="#Raiding" prefHeight="273.0" prefWidth="384.0" text="Raiding" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <AnchorPane fx:id="anchorpaneAllBuildings" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane prefHeight="705.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="460.0" minWidth="10.0" prefWidth="336.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="749.0" minWidth="10.0" prefWidth="462.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="336.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="123.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="563.0" minHeight="10.0" prefHeight="464.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <AnchorPane fx:id="BarracksPane" prefHeight="384.0" prefWidth="347.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <Button id="closeBarracks" layoutX="420.0" minWidth="26.0" mnemonicParsing="false" onAction="#xBarracks" prefHeight="29.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Text fx:id="BarracksInfoText" layoutX="0.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barracks: info about building">
+                          <font>
+                            <Font size="14.0" fx:id="x1" />
+                          </font>
+                        </Text>
+                        <ListView fx:id="ListviewBarracks" prefHeight="291.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0" />
+                              <TextField fx:id="BarracksTextField" layoutX="7.0" layoutY="116.0" promptText="Amount..." />
+                              <Button layoutX="365.0" layoutY="104.0" mnemonicParsing="false" onAction="#upgradeBarracks" text="Upgrade" AnchorPane.rightAnchor="10" />
+                      </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                    </AnchorPane>
+                    <AnchorPane fx:id="TownHallPane" prefHeight="429.0" prefWidth="408.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <Button id="closeTownHall" minWidth="26.0" mnemonicParsing="false" onAction="#xTownHall" prefHeight="29.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Text fx:id="TownHallInfoText" font="$x1" layoutX="0.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Town Hall: info about building" />
+                        <ListView fx:id="ListviewTownHall" prefHeight="291.0" prefWidth="516.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane fx:id="RaidingPane" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <children>
+                        <Button id="closeRaiding" layoutX="409.0" layoutY="14.0" minWidth="26.0" mnemonicParsing="false" onAction="#xRaiding" prefHeight="28.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button id="UpgradeRaiding" layoutX="365.0" layoutY="106.0" mnemonicParsing="false" onAction="#upgradeRaidingHut" text="Upgrade" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" />
+                        <Text fx:id="RaidingInfoText" font="$x1" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raiding: info about building" />
+                      </children>
+                           <GridPane.margin>
+                              <Insets bottom="300.0" />
+                           </GridPane.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                    </AnchorPane>
+                        <AnchorPane fx:id="LumberMillPane" prefHeight="429.0" prefWidth="408.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button id="closeLumberMill" minWidth="26.0" mnemonicParsing="false" onAction="#xLumberMill" prefHeight="29.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Text fx:id="LumberMillText" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lumber Mill: info about building">
+                                 <font>
+                                    <Font size="14.0" fx:id="x11" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="365.0" layoutY="113.0" mnemonicParsing="false" onAction="#upgradeLumberMill" text="Upgrade" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="300.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                        <AnchorPane fx:id="IronMinePane" prefHeight="429.0" prefWidth="408.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button id="closeLumberMill" layoutX="419.0" minWidth="26.0" mnemonicParsing="false" onAction="#xIronMine" prefHeight="29.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Text fx:id="IronMineText" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iron Mine: info about building" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="251.841796875" AnchorPane.topAnchor="36.892578125">
+                                 <font>
+                                    <Font size="14.0" fx:id="x111" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="369.0" layoutY="113.0" mnemonicParsing="false" onAction="#upgradeIronMine" text="Upgrade" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="300.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                        <AnchorPane fx:id="FarmPane" prefHeight="429.0" prefWidth="408.0" styleClass="anchor" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button id="closeLumberMill" layoutX="407.0" layoutY="2.0" minWidth="26.0" mnemonicParsing="false" onAction="#xFarm" prefHeight="29.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Text fx:id="FarmText" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Farm: info about building">
+                                 <font>
+                                    <Font size="14.0" fx:id="x112" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="365.0" layoutY="113.0" mnemonicParsing="false" onAction="#upgradeFarm" text="Upgrade" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="300.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="Leaderboard" layoutX="136.0" layoutY="83.0" prefHeight="705.0" prefWidth="930.0" styleClass="anchor" visible="false" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="83.0">
+      <children>
+        <Button layoutX="884.0" layoutY="14.0" mnemonicParsing="false" onAction="#xLeaderboard" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <ListView fx:id="Leaderboard_list" layoutY="89.0" prefHeight="616.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0" />
+            <GridPane layoutX="32.0" layoutY="6.0" prefHeight="76.0" prefWidth="1031.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="6.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard" textAlignment="CENTER" wrappingWidth="212.00000196695328" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <font>
+                  <Font size="36.0" fx:id="x3" />
+                </font>
+              </Text>
+               </children>
+            </GridPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="TownListPane" layoutX="136.0" layoutY="83.0" prefHeight="705.0" prefWidth="930.0" styleClass="anchor" visible="false" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="83.0">
+      <children>
+        <ListView fx:id="Townlist_list" layoutY="88.0" prefHeight="616.0" prefWidth="930.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="88.0" />
+        <Button layoutX="884.0" layoutY="20.0" mnemonicParsing="false" onAction="#xTownList" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <GridPane layoutX="397.0" prefHeight="90.0" prefWidth="306.0" AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="397.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+              <Text font="$x3" strokeType="OUTSIDE" strokeWidth="0.0" text="List of towns" textAlignment="CENTER" wrappingWidth="275.99999606609344" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="LoginScreen" prefHeight="816.0" prefWidth="1215.0" styleClass="anchor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+            <GridPane prefHeight="816.0" prefWidth="1215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <TextField fx:id="LogInUsername" maxHeight="-Infinity" onAction="#LogInButton" prefHeight="30.0" prefWidth="470.0" text="" GridPane.rowIndex="1" />
+                    <PasswordField fx:id="LogInPassword" maxHeight="-Infinity" onAction="#LogInButton" prefHeight="30.0" prefWidth="470.0" text="" GridPane.rowIndex="2" />
+                        <GridPane GridPane.rowIndex="3">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                          <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#LogInButton" prefHeight="38.0" prefWidth="67.0" text="Log in" />
+                          <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#CreateUserScreen" prefHeight="38.0" prefWidth="234.0" text="Create new user" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="76.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                    <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="76.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane id="VikingWarTitle" prefHeight="118.0" prefWidth="467.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ExitGameButton" text="Exit Game" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Music: Age of Empires 2 Soundtrack. Used with permission from Microsoft. For more info: https://www.microsoft.com/en-us/legal" wrappingWidth="264.37109375" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="NewUserScreen" layoutX="-1.0" layoutY="-2.0" prefHeight="800.0" prefWidth="1200.0" styleClass="anchor" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+            <GridPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="238.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="339.0" minHeight="10.0" prefHeight="310.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <TextField fx:id="CreateUserUsername" onAction="#CreateNewUser" prefHeight="27.0" prefWidth="334.0" GridPane.rowIndex="1" />
+                    <PasswordField fx:id="CreateUserPassword1" onAction="#CreateNewUser" prefHeight="25.0" prefWidth="334.0" GridPane.rowIndex="2" />
+                    <PasswordField fx:id="CreateUserPassword2" onAction="#CreateNewUser" prefHeight="25.0" prefWidth="334.0" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="395.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="72.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#CreateNewUser" prefHeight="38.0" prefWidth="140.0" text="Create new user" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#canceluser" prefHeight="38.0" prefWidth="71.0" text="Cancel" AnchorPane.rightAnchor="0.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#CheckUsername" prefHeight="38.0" prefWidth="140.0" text="Check username" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.0" minWidth="10.0" prefWidth="338.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="129.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                    <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm password:" wrappingWidth="136.0000006761402" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="131.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </Text>
+                    <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane id="VikingWarTitle" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+      </children>
+    </AnchorPane>
+      <AnchorPane fx:id="GameOverPane" prefHeight="200.0" prefWidth="200.0" styleClass="anchor" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutX="400.0" layoutY="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#GameOverNewTown" text="Create new town" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#GameOverLogout" text="Log out" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <AnchorPane fx:id="GameOverTown" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Game over" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="96.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All your base are belong to us." GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="WarningPane" prefHeight="800.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="266.0" prefWidth="467.0" styleClass="anchor" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <children>
+                        <Text fx:id="warninginfotext" layoutX="19.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info text" textAlignment="CENTER" wrappingWidth="423.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="93.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#warningPaneOkButton" prefHeight="40.0" prefWidth="40.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button layoutX="383.0" layoutY="212.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#warningPaneOkButton" prefHeight="40.0" prefWidth="70.0" text="OK" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="TutorialPane" layoutX="10.0" layoutY="10.0" prefHeight="734.0" prefWidth="1100.0" styleClass="anchor" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane prefHeight="800.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane GridPane.rowIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="111.0" styleClass="enemyTown" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button mnemonicParsing="false" prefHeight="91.0" prefWidth="119.0" styleClass="friendlyTown" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label text="Enemy Town" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label text="Friendly Town" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="On the map there are towns, some are yours, and some are yours enemies. The towns with blue flags are yours, and the red ones are your enemies. If you click on these towns you can choose to attack them. The goal of this game reunite the country under one king, you! To win you must capture all the enemy towns." wrappingWidth="456.33984375" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="lumbermillbutton" mnemonicParsing="false" prefHeight="72.0" prefWidth="83.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="ironminebutton" mnemonicParsing="false" prefHeight="81.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="Raiding" mnemonicParsing="false" prefHeight="79.0" prefWidth="85.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Woodcutter: Produces wood." wrappingWidth="99.25390625" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ironmine: Produces iron." wrappingWidth="99.25390625" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Raider: Produces silver." wrappingWidth="99.25390625" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In your town you have resource buildings, these buildings will produce resources for your town that you can use to upgrade other buildings or train units." wrappingWidth="456.33984375" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You also have other building in your town. These building protect your town and helps you get an overview. By upgrading your townhall to level 15 will allow you to capture enemy cities." wrappingWidth="455.80859375" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <GridPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="102.0" styleClass="wall" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="TownHall" mnemonicParsing="false" prefHeight="109.0" prefWidth="113.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="Barracks" mnemonicParsing="false" prefHeight="80.0" prefWidth="101.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wall: Gives defending units a bonus." wrappingWidth="135.25390625" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Town hall: Gives a overview of all buildings." wrappingWidth="137.25390625" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Barracks: Can train new units. Unlock more types by upgrading." wrappingWidth="155.25390625" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Text>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tutorial" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Javanese Text" size="96.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The combat is based around a principle in which certain units have a bonus against others. Infantry are more effective against cavalry, cavarly are good against archers, and archers are good against infrantry. You can train these units in the Barracks." wrappingWidth="456.33984375" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <Button fx:id="TutorialButton" mnemonicParsing="false" onAction="#xTutorial" prefHeight="61.0" prefWidth="136.0" text="Play game!" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Viking Wars. Please read the information to get a basic understanding of the game" wrappingWidth="297.263671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Text>
+                  <AnchorPane fx:id="TutorialCombat" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+                  <AnchorPane fx:id="UItutorial" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@View/style.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# zipper filer
+#find /home -atime +7 -size +1k -exec gzip {}
+
+# skriver ut filer
+find /home -atime +7 -size +1k 

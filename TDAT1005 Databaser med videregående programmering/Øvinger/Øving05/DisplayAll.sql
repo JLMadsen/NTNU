@@ -1,0 +1,4 @@
+SELECT * FROM housingComplex LIMIT 1000;
+SELECT * FROM houses LIMIT 1000;
+SELECT * FROM apartments LIMIT 1000;
+SELECT * FROM members LIMIT 1000;

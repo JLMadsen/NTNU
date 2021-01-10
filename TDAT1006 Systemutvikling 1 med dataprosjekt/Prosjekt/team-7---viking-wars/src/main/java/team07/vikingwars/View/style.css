@@ -1,0 +1,143 @@
+.anchor {
+    -fx-background-image: url("https://drive.google.com/uc?id=1gvTfhZY3abfvgTiBPfmR-4vRdliSj9b_");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+}
+#Map{
+    -fx-background-image: url("https://drive.google.com/uc?id=11Oerj58ccizEwBPDTO3Fdv6QgeDsPNFD");
+    -fx-background-size: 100% 100%;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+.button {
+    -fx-font-size: 16px;
+    -fx-background-image: url("https://drive.google.com/uc?id=1CJWdLOfYeYKVv6LUMoKlmzJbxKfNdyMi");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-image: url("https://drive.google.com/uc?id=1u05HjlTbf6wOIurqJy_a9U8Hk9vvzMlZ");
+}
+.list-cell {
+    -fx-background-image: url("https://drive.google.com/uc?id=1CXQ-qwi4hKiph0ZTju0vB8y35bFk6n92");
+    -fx-background-size: auto,100% 40%;
+    -fx-background-repeat: repeat,no-repeat;
+    -fx-background-position:left top;
+    -fx-font-family: 'Consales';
+}
+.list-cell:hover{
+    -fx-background-image: url("https://drive.google.com/uc?id=13bs80X-Hf-HjSJv9a62JIHB_vqKFyEN5");
+    -fx-border-width:1 1 1 10px;
+}
+#Town_map {
+    -fx-background-image: url("https://drive.google.com/uc?id=18a03Oe13n27ID6BxW4oDUhx-r58xdhr3");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+}
+#TownHall {
+    -fx-background-image: url("https://drive.google.com/uc?id=1z5eIygmc_NrHYJSNhuD-168TvtcslPWv");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: white;
+}
+#Barracks {
+    -fx-background-image: url("https://drive.google.com/uc?id=14foo3KYAECWFnkN5NzZ5UDgQ5zOrKel6");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: white;
+}
+#Raiding {
+    -fx-background-image: url("https://drive.google.com/uc?id=1Sl6kqqegBg2LbMu12YC2cWtC4c1b99Sn");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: white;
+}
+.wall {
+    -fx-background-image: url("https://drive.google.com/uc?id=1E8cKsAW4QXtm0Dmx6UMhF7zCHi9TPdDi");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+}
+.enemyTown {
+    -fx-background-image: url('https://drive.google.com/uc?id=1eA1jtm0oe7xhfCbzGD-wqKSTFADBDzYY');
+}
+.friendlyTown {
+    -fx-background-image: url('https://drive.google.com/uc?id=1ju9u7T0O180C3ub8h6RAjT0gO9tbW7nb');
+}
+#lumbermillbutton {
+    -fx-background-image: url("https://drive.google.com/uc?id=1aT5ilsRXoAC8fEmRhWSKmFMRQrOkMwyS");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+#farmbutton {
+    -fx-background-image: url("https://drive.google.com/uc?id=11qsk3yKJiMTw9ll7S8AZKcheVDtx7xmh");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#ironminebutton {
+    -fx-background-image: url("https://drive.google.com/uc?id=1g_eGhCMwa8BKjCSC-9eP-QxcXDNcweM5");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#GameOverText {
+    -fx-background-image: url("https://drive.google.com/uc?id=1B8g3hC3bCN3jMT4_uvWrKXautfEZc7WM");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#GameOverTown {
+    -fx-background-image: url("https://drive.google.com/uc?id=1rwyjDC4hNyRbvhIZh1mQTLN2wGVE2wyz");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#VikingWarTitle {
+    -fx-background-image: url("https://drive.google.com/uc?id=1Q0aGlTs8QMlHLQUkWdR6p7zVwPhesr0M");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#TutorialCombat {
+    -fx-background-image: url("https://drive.google.com/uc?id=1ErqwJV9uFyCmhmdf23ATEV4kYKj7D8hW");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+    -fx-text-fill: white;
+}
+#UItutorial {
+    -fx-background-image: url("https://drive.google.com/uc?id=1lF9a6beyzTTdVgv0V3KANpSryO6Cobvb");
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: stretch;
+}
+.townbuttons:hover {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.townbuttons {
+    -fx-text-fill: transparent;
+}
+#WarningPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#BarracksPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#RaidingPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#IronMinePane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#FarmPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#TownHallPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+#LumberMillPane {
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}

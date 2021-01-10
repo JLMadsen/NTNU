@@ -1,0 +1,7 @@
+2a3,4
+> using namespace std;
+> 
+5c7
+<     std::cout << "Heisann" << std::endl;
+---
+>     cout << "Heisann" << endl;

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sudo pacman -Syuu --noconfirm
+sudo pacman -S docker --noconfirm && sudo systemctl start docker && sudo systemctl enable docker && sudo usermod -aG docker $USER
+sudo pacman -S wireshark-qt --noconfirm && sudo usermod -aG wireshark $USER
+
+sudo pacman -S openssh --noconfirm
+sudo systemctl start sshd
+
+pamac install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap
+
+sudo snap install clion --classic
+sudo snap install datagrip --classic
+sudo snap install intellij-idea-community --classic
+sudo snap install intellij-idea-ultimate --classic
+sudo snap install node --edge --classic
+sudo snap install webstorm --classic
+sudo snap install code --classic
+
+reboot

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo jeg heter `whoami`
+
+MASKIN=`hostname` 
+
+echo "$MASKIN"

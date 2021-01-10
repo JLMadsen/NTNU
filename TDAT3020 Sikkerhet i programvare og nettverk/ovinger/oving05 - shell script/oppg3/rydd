@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# original
+# find . -name "*.jpg" -exec ./flyttjpg {} \;
+
+# forbedret
+find . -name "*.jpg" -not -path "*\/jpg*" -exec ./flyttjpg {} \;
+
+# print ut all ejpg filer
+# find . -name "*.jpg"

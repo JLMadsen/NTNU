@@ -1,0 +1,10 @@
+Forklar hva optimistisk låsing er:
+
+Optimistisk låsing består av at hvert felt i databasen har en teller.
+Denne telleren økes hver gang noen endrer på dataen.
+
+Dersom man leser og telleren er på 1, men økes til 3 når man lagrer dataen vil man se at dataen man har lest er utdatert.
+Når tallene endrer seg slik vet vi at vi burde lese dataen igjen.
+
+Optimistik låsing brukes når man forventer få kollisjoner, men dersom det skjer må vi lese på nytt.
+Det er viktig at denne telleren er atomisk.

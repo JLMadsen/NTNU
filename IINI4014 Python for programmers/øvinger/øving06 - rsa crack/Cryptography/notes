@@ -1,0 +1,42 @@
+P og Q er primtall
+
+_________________________________ public key
+første del av public key
+n = P * Q 
+
+vi trenger en eksponent e
+- e må være en integer
+- ikke en faktor av n
+- 1 < e < ø(n)
+
+public key er laget av n og eksponent
+
+_________________________________ Private key
+vi trenger ø(n)
+ø(n) = (P-1)(Q-1)
+
+privat nøkkel d
+k 0 integer
+d = (k * ø(n) + 1) / e
+
+
+_________________________________ eksempel
+P = 53
+Q = 59
+e = 3
+n = P*Q = 3127
+
+Ø(n) = (P-1)(Q-1) = (53-1)(59-1) = 3016
+k = 2
+d = (k * ø(n) + 1) / e = (2 * 3016 +1) / 2 = 2011
+
+text = HI
+H = 8
+I = 9
+
+kryptert
+89 ^e mod n
+= 1394
+
+dekryptert
+1394 ^d mod n
